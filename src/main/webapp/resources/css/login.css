@@ -1,0 +1,78 @@
+body {
+	background-color: #fdfcf0;
+}
+
+#login_wrap {
+	position: relative;
+    width: 980px;
+    margin: 0 auto;
+    clear: both;
+}
+
+#simple_bar {
+	font-size: 12px;
+	margin-top: -20px;
+}
+
+#simple_bar a:nth-child(n+2) {
+	margin-left: 10px;
+}
+
+#simple_bar > a {
+	padding-right: 10px;
+	text-decoration: none;
+	color: #222;
+}
+
+.login_area {
+	position: relative;
+	width: 400px;
+	left: 25%;
+	margin-top: 50px;
+	padding: 50px;
+	color: gray;
+	border-top: 3px solid #6666;
+    border-bottom: 3px solid #6666;
+}
+
+.id {
+	margin: 10px 0;
+	border: 3px solid #cccccc;
+	background-color: white;
+}
+
+.id > span, .pwd > span {
+	padding-left: 10px;
+	padding-right: 10px;
+	border-right: 1px solid #ccc;
+}
+
+.id > span {
+	padding-right: 24px;
+}
+
+.pwd {
+	border: 3px solid #cccccc;
+	background-color: white;
+}
+
+.id > input, .pwd > input {
+	height: 40px;
+	border: 1px solid white;
+	background-color: white;
+}
+
+#login {
+	margin-top: 10px;
+	width: 400px;
+	background-color: red;
+	border: 3px solid rgb(174, 0, 0);
+	color: white;
+	height: 40px;
+	cursor: pointer;
+}
+
+.login_area > a {
+	float: right;
+    margin-top: 10px;
+}

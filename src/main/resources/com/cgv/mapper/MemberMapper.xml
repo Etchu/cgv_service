@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cgv.mapper.MemberMapper">
+	
+	<select id="memberLogin" resultType="java.lang.Integer">
+		SELECT COUNT(*) FROM cm_member WHERE cmm_id=#{id} AND cmm_pwd=#{pwd}
+	</select>
+	<select id="selectSimpleMemberInfo" resultType="com.cgv.vo.SimpleMemberVO">
+		SELECT cmm_id AS id, cmm_name AS name, cmm_grade AS grade, cmm_type AS type
+		FROM cm_member
+		WHERE cmm_id=#{id} AND cmm_pwd=#{pwd}
+	</select>
+	
+	<insert id="insertMemberInfo">
+		INSERT INTO cm_member(
+			cmm_id,
+			cmm_name,
+			cmm_pwd,
+			cmm_email,
+			cmm_phone,
+			cmm_address,
+			cmm_gen,
+			cmm_birth,
+			cmm_age_confirm,
+			cmm_terms
+		)
+		VALUES (
+			#{cmm_id},
+			#{cmm_name},
+			#{cmm_pwd},
+			#{cmm_email},
+			#{cmm_phone},
+			#{cmm_address},
+			#{cmm_gen},
+			#{cmm_birth},
+			#{cmm_age_confirm},
+			#{cmm_terms}
+		)
+	</insert>
+	
+	<select id="selectUserCntById" resultType="java.lang.Integer">
+		SELECT COUNT(*)
+		FROM cm_member WHERE cmm_id=#{id}
+	</select>
+	
+	<select id="selectUserCntByEmail" resultType="java.lang.Integer">
+		SELECT COUNT(*)
+		FROM cm_member WHERE cmm_email=#{email}
+	</select>
+</mapper>

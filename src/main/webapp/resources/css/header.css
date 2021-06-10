@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+body {
+	font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-weight: 300;
+	color: black;
+	line-height: 1.2;
+}
+
+#ad_wrap {	
+	width: 100%;
+	height: 80px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #215f9c;
+}
+
+#ad_wrap img {
+	margin: 0 auto;
+    display: block;
+}
+
+#header_wrap {
+	position: relative;
+    width: 100%;
+    min-width: 980px;
+    background: #fdfcf0 url(https://img.cgv.co.kr/R2014/images/common/bg/bg_header.gif) repeat-x 0 0;
+}
+
+#main_wrap {
+	position: relative;
+    width: 980px;
+    height: 149px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+	position: absolute;
+    top: 40px;
+    width: 223px;
+    height: 85px;
+    padding: 18px 0 0 22px;
+    z-index: 110;
+}
+
+.service_menu {
+	overflow: visible;
+    position: relative;
+    height: 30px;
+    font-size: 11px;
+}
+
+.service_menu > .gnb {
+	float: right;
+	margin: 0;
+    text-align: left;
+}
+
+.service_menu > .gnb > li {
+	display: inline-block;
+}
+
+.service_menu > .gnb li > a {
+	padding: 0 10px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 10px;
+    color: #333333;
+}
+
+.gnb > li > a {
+	border-right: 1px solid rgba(0,0,0,0.3);
+}
+
+.main_menu > h2 {
+	position: absolute;
+    top: 58px;
+    left: 50%;
+    width: 428px;
+    height: 31px;
+    margin-left: -214px;
+    text-align: center;
+}
+
+#gnb_list, #sub_gnb_list {
+	position: relative;
+	padding: 0;
+	list-style-type: none;
+}
+
+#gnb_list {
+	margin-left: 280px;
+	margin-top: 55px;
+}
+
+#gnb_list > li {
+	float: left;
+}
+
+#gnb_list > li > a {
+	display: block;
+	text-align: center;
+	padding: 12px 28px;
+	font-weight: 600;
+    color: #333333;
+}
+
+#sub_gnb_list {
+	position: absolute;
+	color: white;
+	display: none;
+	z-index: 9999;
+}
+
+#sub_gnb_list > ul {
+	background-color: black;
+	height: 150px;
+	width: 100px;
+	padding: 15px;
+}
+
+#sub_gnb_list > ul > li {
+	padding-bottom: 15px;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+#sub_gnb_list > ul > li > a {
+	padding: 10px;
+	color: white;
+}
+
+#sub_gnb_list > ul > li > a:hover {
+	color: red;
+} 
+
+#gnb_list > li:hover #sub_gnb_list {
+	display: block;
+}
+
+.underline {
+	text-decoration: none;
+}
+.underline:hover {
+	text-decoration: none;
+}
+
+.search {
+	margin-top: 64px;
+}
+
+.search > input {
+	width: 120px;
+	height: 20px;
+	border: 1px solid gray;
+}
+
+.search > button {
+	background-color: red;
+	border: 1px solid red;
+	color: white;
+	height: 25px;
+	font-size: 12px;
+	margin-left: -5px;
+	cursor: pointer;
+	font-weight: 600;
+	width: 38px;
+}
+
+.bar {
+	width: 100%;
+    background-color: #f1f0e5;
+    border-bottom: 1px solid #cacac0;
+    height: 28px;
+}

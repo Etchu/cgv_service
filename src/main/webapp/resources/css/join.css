@@ -1,0 +1,131 @@
+@charset "EUC-KR";
+
+body {
+	background-color: #fdfcf0;
+}
+
+#simple_bar {
+	font-size: 12px;
+	margin-top: -20px;
+}
+
+#simple_bar a:nth-child(n+2) {
+	margin-left: 10px;
+}
+
+#simple_bar > a {
+	padding-right: 10px;
+	text-decoration: none;
+	color: #222;
+}
+
+.join_form_wrap {
+	position: relative;
+    width: 980px;
+    margin: 0 auto;
+    clear: both;
+}
+
+.join_form_wrap h1 {padding:30px 0; font-size: 24px; font-weight: 500; text-align: center;}
+.form_header {border-bottom:2px solid #aaa; padding-bottom: 10px; margin-top: 65px;}
+.form_header p {text-align: right; font-size: 12px; color: #666;}
+.necessary {color: orangered;}
+.join_form_wrap td {padding:10px 0;}
+
+.recommand_id_input, .event_input {display: none;}
+#recommand_id:checked ~ .recommand_id_input {display: block;}
+#event_name:checked ~ .event_input {display: block;} 
+
+.join_form_wrap td {text-align: left;}
+.join_form_wrap td:first-child {width: 140px; font-weight: 500; font-size: 15px; color: #444;}
+.join_form_wrap td:nth-child(2) {width: 350px;}
+.join_form_wrap table {padding:20px; width: 600px; margin-left: 200px; margin-top: 20px;}
+
+.join_form_wrap input[type="text"], .join_form_wrap input[type="password"] {
+	width: 100%; box-sizing:border-box; padding:7px; outline:none;
+	border: 2px solid #ccc; border-radius:3px;
+}
+.join_form_wrap input[type="text"]:focus, .join_form_wrap input[type="password"]:focus {
+	border-color: #434343;
+}
+#dup_check, #email_dup_check, #address_search {
+	height: 30px; box-sizing:border-box; vertical-align: middle;
+	border: 0; margin-left: 10px; width: 70px; background-color: #fff;
+	border: 2px solid #BF2C1C; border-radius:3px; font-size: 12px; font-weight: bold;
+	color: #BF2C1C; margin-top: -1px; cursor: pointer;
+}
+#dup_check:hover, #email_dup_check:hover, #address_search:hover {
+	color: white;
+	background-color: #BF2C1C;
+}
+
+#address_search { margin-left: 0; width: 100%;}
+#address_search+p {font-size: 12px; margin-top: 10px; color: #666;}
+.user_birth {width: 100%; font-size: 0; border: 1px solid #ccc; padding:10px; box-sizing:border-box;
+	border-radius:3px;
+}
+.user_birth input {width: 30%; border: 0; outline:none; text-align: center;}
+.user_birth input::placeholder {text-align: center;}
+.user_birth span {font-size: 14px; color: #ccc;}
+
+.join_form_wrap input[type="radio"]+label {
+	display: inline-block; width: 15px; height: 15px; border: 2px solid #ccc;vertical-align: middle;
+	border-radius:50%; color: #fff; margin-top: -1px; text-align: center; margin-right: 10px;
+}
+.join_form_wrap input[type="radio"] {display: none;}
+.join_form_wrap input[type="radio"]+label i {
+	font-size: 10px; position: relative; top: 2.5px;
+}
+.join_form_wrap input[type="radio"]:checked+label {
+	background-color: #BF2C1C;
+}
+.join_form_wrap input[type="radio"]+label+label {display: inline-block; width: 70px;}
+.join_form_wrap input[type="radio"]+.radio_icon+label {width: 130px;}
+
+.recommand_id_input, .event_input {
+	margin-top: 20px;
+}
+.recommand_id_input p, .event_input p {
+	margin-top: 10px; font-size: 12px; line-height: 1.5; color: #666;
+}
+
+.aggrements {border-top: 1px solid #000;}
+.aggrements_row {overflow: hidden;}
+.aggrements_row > div {float: left;}
+.aggrements_row > div:first-child {width: 35px;}
+.aggrements_row > div:last-child {width:calc(100% - 35px);}
+.agree_all_label {font-size: 18px; font-weight: 500;}
+.agree_all_label+p {font-size: 12px; color: #666; margin-top: 7px;}
+.aggrements_row input {display: none;}
+.aggrements_row {padding-bottom: 15px;}
+.aggrements_row label {display: inline-block; vertical-align: middle;}
+.aggrements_row input+label {
+	display: inline-block; width: 24px; height: 24px; border: 1px solid #ccc;vertical-align: middle;
+	border-radius:50%; color: #ccc; text-align: center; margin-right: 10px;
+}
+.aggrements_row a {float: right; color: #5f0080; text-decoration: none;}
+.aggrements_row a i {margin-left: 5px;}
+.aggrements_row input:checked+label {
+	background-color: #BF2C1C; color: #fff; border-color: #5f0080;
+}
+.checkbox_icon i {position: relative; top: 4px;}
+
+.sms_text {font-size: 12px; margin-left: 40px; margin-top: 10px;}
+.sms_text span:first-child {color: #BF2C1C;}
+.necessary_text {color: #999;}
+
+.btn_area {margin-top: 20px; padding-top: 20px; border-top: 2px solid #aaa; text-align: center;
+padding-bottom: 100px;} 
+.btn_area button {
+	width: 160px; height: 40px; border: 2px solid #BF2C1C; border-radius:5px; background-color: #BF2C1C; color: #fff;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.btn_area > #join_cancel {
+	background-color: white; color: #666;
+}
+
+.aggrements_row.indent input+label+label {
+	display: inline-block; width: 160px;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cgv.mapper.MovieMapper">
+	<select id="selectMovieList" resultType="com.cgv.vo.MovieVO">
+		SELECT *
+		FROM cm_information
+	</select>
+	
+	<select id="selectMovieBySeq" resultType="com.cgv.vo.MovieVO">
+        SELECT * FROM cm_information
+        WHERE cmi_seq=#{no} 
+    </select>
+    
+    <select id="selectActorByMovieSeq" resultType="com.cgv.vo.ActorVO">
+    	SELECT b.cma_seq, b.cma_name 
+		FROM cm_information a
+		INNER JOIN cm_info_actor bb
+		ON a.cmi_seq = bb.cmia_info_seq
+		INNER JOIN cm_actor b
+		ON bb.cmia_actor_seq = b.cma_seq
+		WHERE a.cmi_seq = #{seq}
+    </select>
+    
+    <select id="selectDirectorByMovieSeq" resultType="com.cgv.vo.DirectorVO">
+    	SELECT b.cmd_seq, b.cmd_name 
+		FROM cm_information a
+		INNER JOIN cm_info_director bb
+		ON a.cmi_seq = bb.cmid_info_seq
+		INNER JOIN cm_director b
+		ON bb.cmid_director_seq = b.cmd_seq
+		WHERE a.cmi_seq = #{seq}
+    </select>
+    
+    <select id="selectGenreByMovieSeq" resultType="com.cgv.vo.GenreVO">
+    	SELECT b.cmg_seq, b.cmg_name 
+		FROM cm_information a
+		INNER JOIN cm_info_genre bb
+		ON a.cmi_seq = bb.cmig_info_seq
+		INNER JOIN cm_genre b
+		ON bb.cmig_genre_seq = b.cmg_seq
+		WHERE a.cmi_seq = #{seq}
+    </select>
+    
+</mapper>
